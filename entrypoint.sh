@@ -42,7 +42,7 @@ executeSSH() {
     if [ -z "$COMMANDS" ]; then
       COMMANDS="$COMMAND"
     else
-      COMMANDS="$COMMANDS;$COMMAND"
+      COMMANDS="$COMMANDS && $COMMAND"
     fi
   done <<< $LINES
 
